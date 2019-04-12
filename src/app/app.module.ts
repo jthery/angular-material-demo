@@ -4,7 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { MatCheckboxModule, MatRadioModule, MatSelectModule } from '@angular/material';
+import { MatCheckboxModule, MatRadioModule, MatSelectModule, MatInputModule } from '@angular/material';
 import { FormsModule } from '@angular/forms';
 
 
@@ -17,9 +17,11 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
+    NoopAnimationsModule,
     MatCheckboxModule,
     MatRadioModule,
-    MatSelectModule
+    MatSelectModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

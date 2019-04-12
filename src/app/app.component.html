@@ -1,11 +1,6 @@
 <!-- Checkbox -->
 <h1>Checkbox</h1>
-<mat-checkbox
-    #showDetails
-    [value]=""
-    [checked]="isChecked"
-    (change)="onChange($event)"
-    >Show details</mat-checkbox>
+<mat-checkbox #showDetails [value]="" [checked]="isChecked" (change)="onChange($event)">Show details</mat-checkbox>
 
 
 <div *ngIf="showDetails.checked">Some details...</div>
@@ -15,8 +10,8 @@
 <!-- RADIOBUTTON -->
 <h1>Radio Button</h1>
 <mat-radio-group value="0">
-    <mat-radio-button value="1">Male</mat-radio-button>
-    <mat-radio-button value="0">Female</mat-radio-button>
+  <mat-radio-button value="1">Male</mat-radio-button>
+  <mat-radio-button value="0">Female</mat-radio-button>
 </mat-radio-group>
 
 <br><br>
@@ -24,7 +19,17 @@
 <!-- DROP DOWN LIST -->
 <h1>Drop down list</h1>
 <mat-select [(ngModel)]="color">
-    <mat-option *ngFor="let color of colors" [value]="color.id">{{ color.name }}</mat-option>
+  <mat-option *ngFor="let color of colors" [value]="color.id">{{ color.name }}</mat-option>
 </mat-select>
+
+<!-- Input -->
+<h1>Input</h1>
+<mat-form-field>
+  <input ngModel type="text" matInput placeholder="Username" required>
+  <mat-hint>Type a unique username</mat-hint>
+  <span matSuffix >@domain.com</span>
+  <span matPrefix > admin.</span>
+  <mat-error>The username field is required</mat-error>
+</mat-form-field>
 
 <router-outlet></router-outlet>
